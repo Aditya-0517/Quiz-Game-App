@@ -393,11 +393,11 @@ score_img_label.place(x=0, y=0, relheight=1,relwidth=1)
 
 bact_to_home_btn = PhotoImage(file="images/backtohome.png")
 bact_to_home_button = Button(frame4, image=bact_to_home_btn, cursor = "hand2", borderwidth=0, command=refresh_session)
-bact_to_home_button.place(x=700 , y=250)
+bact_to_home_button.place(x=575 , y=200)
 
 view_highscore_btn = PhotoImage(file="images/Highscore.png")
 view_highscore_button = Button(frame4, image=view_highscore_btn, cursor = "hand2", borderwidth=0, command=lambda:load_highscores(frame5))
-view_highscore_button.place(x=700 , y=475)
+view_highscore_button.place(x=575 , y=475)
 
 #============================================== FRAME 5 ==================================================#
 
