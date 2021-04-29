@@ -37,11 +37,11 @@ conn = sqlite3.connect('Database.db')
 
 c = conn.cursor()
 
-# c.execute("""CREATE TABLE QuizData(
+#c.execute('''CREATE TABLE QuizData(
 #             name text,
-#             score number
-#             )
-#             """)
+#             score number)''')
+
+
 
 def get_player_name(player_name):
     c.execute("SELECT * FROM QuizData WHERE name=:name", {'name':player_name})
@@ -87,7 +87,7 @@ def load_questions():
                         option3 = answer[2]
                         option4 = answer[3]
                         myoptionlabel = Label(frame3, bg="black")
-                        myoptionlabel.place(x= 545,y= 300)
+                        myoptionlabel.place(x= 545,y= 270)
                         Radiobutton(myoptionlabel, text=option1, font =("times new roman", 18, "bold"), bg="black", fg="white", variable=var2, value=option1, selectcolor="#000000").pack(pady=5, anchor="w")
                         Radiobutton(myoptionlabel, text=option2, font =("times new roman", 18, "bold"), bg="black", fg="white", variable=var2, value=option2, selectcolor="#000000").pack(pady=5, anchor="w")
                         Radiobutton(myoptionlabel, text=option3, font =("times new roman", 18, "bold"), bg="black", fg="white", variable=var2, value=option3, selectcolor="#000000").pack(pady=5, anchor="w")
